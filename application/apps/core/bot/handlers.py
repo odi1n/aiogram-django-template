@@ -5,6 +5,21 @@ from config.apps import INSTALLED_APPS
 from .. import services
 
 
+class RegisterHandlers:
+    def __init__(self, dp: Dispatcher):
+        @dp.message_handler(content_types=["text"])
+        async def start(message: Message):
+            user, is_created = await services.add_user(
+                tg_id=message.from_user.id,
+                chat_id=message.chat.id,
+                first_name=message.from_user.first_name)
+
+            if is_created:
+                await message.answer('You have successfully registered in the bot!')
+            else:
+                await message.answer('You are already registered in the bot!')
+
+
 def register_handlers(dp: Dispatcher):
     dp.register_message_handler(
         start, commands=['start'])

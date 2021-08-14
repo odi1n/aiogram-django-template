@@ -15,13 +15,14 @@ def register(dp: Optional[Dispatcher] = None) -> None:
     register_models()
 
     if dp is not None:
-        from .bot.handlers import register_handlers
+        from .bot.handlers import register_handlers, RegisterHandlers
         from .bot.middlewares import register_middlewares
         from .bot.filters import register_filters
 
         register_middlewares(dp)
         register_filters(dp)
         register_handlers(dp)
+        RegisterHandlers(dp)
 
 
 class Core(AppConfig):
