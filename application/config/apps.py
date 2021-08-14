@@ -26,3 +26,4 @@ async def register_apps(dp: Optional[Dispatcher] = None) -> None:
         app.register(dp)
 
     await Tortoise.init(config=DatabaseConfig.get_tortoise_config())
+    await Tortoise.generate_schemas()
