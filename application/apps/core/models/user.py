@@ -12,7 +12,3 @@ class User(Model):
 
     class Meta:
         table = 'user'
-
-
-def register_models() -> None:
-    Tortoise.init_models(models_paths=['apps.core.models'], app_label='core')
