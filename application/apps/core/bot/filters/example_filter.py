@@ -1,7 +1,7 @@
 from aiogram import Dispatcher
-from aiogram.dispatcher import middlewares
+from aiogram.dispatcher.filters import BoundFilter, Filter
 
 
-class RegisterMiddlewares(object):
+class Example:
     def __init__(self, dp: Dispatcher):
         pass

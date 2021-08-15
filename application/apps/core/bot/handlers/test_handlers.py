@@ -2,14 +2,11 @@ from aiogram import Dispatcher
 from aiogram.types import Message
 
 import logger
+from apps.core import services
 from config.apps import INSTALLED_APPS
 
-from .. import services
-
-
-class RegisterHandlers:
+class Test:
     def __init__(self, dp: Dispatcher):
-
         @dp.message_handler(commands=['test'])
         async def test(message: Message):
             logger.log.info("dasd")
