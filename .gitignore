@@ -130,3 +130,12 @@ dmypy.json
 
 #PyCharm
 .idea
+
+#Data - Docker Postgres
+/data
+
+# tlp
+.tlp
+
+# static
+static/
