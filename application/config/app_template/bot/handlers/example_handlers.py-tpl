@@ -1,7 +1,7 @@
 from aiogram import Dispatcher
-from aiogram.dispatcher.filters import BoundFilter, Filter
 
 
-class ExampleFilter:
+# Create your handlers here
+class ExampleHandlers:
     def __init__(self, dp: Dispatcher):
         pass

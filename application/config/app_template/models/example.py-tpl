@@ -1,0 +1,10 @@
+from tortoise import fields
+from tortoise.models import Model
+
+
+class Example(Model):
+    name = fields.CharField(max_length=255)
+
+    class Meta:
+        abstract = True
+        table = 'example'

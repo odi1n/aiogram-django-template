@@ -3,5 +3,11 @@ from orm_converter import TortoiseToDjango
 
 from .. import models
 
+
 # Register your models here.
 # To convert models: TortoiseToDjango.convert(models.ModelName)
+"""
+@admin.register(TortoiseToDjango.convert(models.Example))
+class ExampleAdmin(admin.ModelAdmin):
+    list_display = ['id']
+"""

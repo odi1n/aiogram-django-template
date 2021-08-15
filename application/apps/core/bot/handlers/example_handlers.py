@@ -5,7 +5,7 @@ import logger
 from apps.core import services
 from config.apps import INSTALLED_APPS
 
-class Test:
+class ExampleHandlers:
     def __init__(self, dp: Dispatcher):
         @dp.message_handler(commands=['test'])
         async def test(message: Message):

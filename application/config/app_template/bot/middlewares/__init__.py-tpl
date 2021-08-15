@@ -1,10 +1,9 @@
 from aiogram import Dispatcher
-from aiogram.dispatcher import middlewares
 
 
 def register_middlewares(dp: Dispatcher):
     # Register your middlewares here
-    pass
+    from .example_middlewares import ExampleMiddlewares
 
-
-# Create your middlewares here
+    # Set dp
+    ExampleMiddlewares(dp)

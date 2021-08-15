@@ -1,0 +1,7 @@
+from example import Example
+
+
+def register_models() -> None:
+    from tortoise import Tortoise
+
+    Tortoise.init_models(models_paths=['apps.{{ app_name }}.models'], app_label='{{ app_name }}')

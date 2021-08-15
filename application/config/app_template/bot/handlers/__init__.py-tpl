@@ -2,6 +2,8 @@ from aiogram import Dispatcher
 
 
 def register_handlers(dp: Dispatcher):
+    # Register your handlers here
     from .example_handlers import ExampleHandlers
 
+    # Set dp
     ExampleHandlers(dp)

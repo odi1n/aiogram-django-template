@@ -2,5 +2,8 @@ from aiogram import Dispatcher
 
 
 def register_filter(dp: Dispatcher):
+    # Register your filters here
     from .example_filter import ExampleFilter
+
+    #Set dp
     ExampleFilter(dp)
