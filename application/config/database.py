@@ -1,6 +1,8 @@
 from os import getenv
 from typing import Dict, Type, Set
 
+from config_db import *
+
 from tortoise import Model
 
 
@@ -12,11 +14,11 @@ class DatabaseConfig:
                 'default': {
                     'engine': 'tortoise.backends.asyncpg',
                     'credentials': {
-                        'host': getenv('DB_HOST'),
-                        'port': getenv('DB_PORT'),
-                        'user': getenv('DB_USER'),
-                        'password': getenv('DB_PASSWORD'),
-                        'database': getenv('DB_NAME'),
+                        'host': DB_HOST,
+                        'port': DB_PORT,
+                        'user': DB_USER,
+                        'password': DB_PASSWORD,
+                        'database': DB_NAME,
                     }
                 },
             },
@@ -30,11 +32,11 @@ class DatabaseConfig:
         return {
             'default': {
                 'ENGINE': 'django.db.backends.postgresql',
-                'HOST': getenv('DB_HOST'),
-                'PORT': getenv('DB_PORT'),
-                'USER': getenv('DB_USER'),
-                'PASSWORD': getenv('DB_PASSWORD'),
-                'NAME': getenv('DB_NAME'),
+                'HOST': DB_HOST,
+                'PORT': DB_PORT,
+                'USER': DB_USER,
+                'PASSWORD': DB_PASSWORD,
+                'NAME': DB_NAME,
             }
         }
 

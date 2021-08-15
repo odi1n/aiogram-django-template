@@ -1,12 +1,8 @@
-from os import getenv
+from config_db import *
 
 TORTOISE_ORM = {
     'connections': {
-        'host': getenv('DB_HOST'),
-        'port': getenv('DB_PORT'),
-        'user': getenv('DB_USER'),
-        'password': getenv('DB_PASSWORD'),
-        'database': getenv('DB_NAME'),
+        "default": f"postgres://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
     },
     'apps': {
         "models": {
