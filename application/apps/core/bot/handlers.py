@@ -1,13 +1,20 @@
 from aiogram import Dispatcher
 from aiogram.types import Message
 
+import logger
 from config.apps import INSTALLED_APPS
+
 from .. import services
 
 
 class RegisterHandlers:
     def __init__(self, dp: Dispatcher):
-        @dp.message_handler(content_types=["text"])
+        @dp.message_handler(commands=['test'])
+        async def test(message: Message):
+            logger.log.info("dasd")
+            await message.answer(message.text)
+
+        @dp.message_handler(commands=["sstart"])
         async def start(message: Message):
             user, is_created = await services.add_user(
                 tg_id=message.from_user.id,
