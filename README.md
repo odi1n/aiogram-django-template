@@ -13,23 +13,23 @@
    * `pip install -r requirements.txt`
 
 #### 3. Change Config:
-   * Go to the `application/config/`
+   * Go to the `application/`
    * Rename `.env.dist` to `.env`
    * Insert your values
 
-#### 3. Make migrations:
+#### 4. Make migrations:
    * Go to the `application/`
    * Run `python manage.py makemigrations`
    * Run `python manage.py migrate`
    
-#### 4. Run bot:
+#### 5. Run bot:
    * `python manage.py runbot`
 
-#### 5. Run server (Django):
+#### 6. Run server (Django):
    * Collect static: `python manage.py collectstatic`
    * Run server: `python manage.py runserver`
 
-#### 6. Run app _(Bot + Server)_:
+#### 7. Run app _(Bot + Server)_:
    * `python manage.py runapp` or `python app.py`
 
 ## Usage
